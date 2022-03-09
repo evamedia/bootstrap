@@ -282,8 +282,8 @@
             <label class="col-sm-3 control-label"><strong>Build</strong></label>
             <div class="col-sm-9">
               <span class="btn-group">
-                <button type="button" class="btn btn-default" ng-model="options.minified" uib-btn-radio="true">Minified</button>
-                <button type="button" class="btn btn-default" ng-model="options.minified" uib-btn-radio="false">Uncompressed</button>
+                <button type="button" class="btn btn-secondary" ng-model="options.minified" uib-btn-radio="true">Minified</button>
+                <button type="button" class="btn btn-secondary" ng-model="options.minified" uib-btn-radio="false">Uncompressed</button>
               </span>
               <small class="help-block">Use <b>Minified</b> version in your deployed application. <b>Uncompressed</b> source code is useful only for debugging and development purpose.</small>
             </div>
@@ -292,8 +292,8 @@
             <label class="col-sm-3 control-label"><strong>Include Templates</strong></label>
             <div class="col-sm-9">
               <span class="btn-group">
-                <button type="button" class="btn btn-default" ng-model="options.tpls" uib-btn-radio="true">Yes</button>
-                <button type="button" class="btn btn-default" ng-model="options.tpls" uib-btn-radio="false">No</button>
+                <button type="button" class="btn btn-secondary" ng-model="options.tpls" uib-btn-radio="true">Yes</button>
+                <button type="button" class="btn btn-secondary" ng-model="options.tpls" uib-btn-radio="false">No</button>
               </span>
               <small class="help-block">Whether you want to include the <i>default templates</i>, bundled with most of the directives. These templates are based on Bootstrap's markup and CSS.</small>
             </div>
@@ -308,7 +308,7 @@
         </form>
     </div>
     <div class="modal-footer">
-        <a class="btn btn-default" ng-click="cancel()">Close</a>
+        <a class="btn btn-secondary" ng-click="cancel()">Close</a>
         <a class="btn btn-primary" ng-href="{{download('<%= pkg.version%>')}}" download><i class="glyphicon glyphicon-download-alt"></i> Download <%= pkg.version %></a>
     </div>
 </script>
@@ -334,7 +334,7 @@
               <% if (i % 3 === 0) {%>
                 <div class="btn-group" style="width: 100%;">
               <% } %>
-              <button type="button" class="btn btn-default"
+              <button type="button" class="btn btn-secondary"
                style="width: 33%; border-radius: 0;"
                ng-class="{'btn-primary': module.<%= module.name %>}"
                ng-model="module.<%= module.name %>"
@@ -349,7 +349,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <a class="btn btn-default" ng-click="cancel()">Close</a>
+        <a class="btn btn-secondary" ng-click="cancel()">Close</a>
         <a class="btn btn-primary" ng-hide="isOldBrowser()"
             ng-disabled="isOldBrowser() !== false && !selectedModules.length"
             ng-click="selectedModules.length && build(selectedModules, '<%= pkg.version %>')">
